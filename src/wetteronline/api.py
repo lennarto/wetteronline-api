@@ -126,8 +126,9 @@ class WeatherUtils:
             ## delete useless keys
             for key in ["dayTime", "daySynonym", "docrootVersion", "windSpeedText", "windDirectionLong"]:
                 smallreturndict.pop(key, None)
-            ## delete unknown keys
-            for key in ["smog", "tierAppendix", "symbol", "symbolText", "windy", "weatherInfoIndex"]:
+            ## delete unknown keys 
+            # removed symbolText since its actual useful 
+            for key in ["smog", "tierAppendix", "symbol", "windy", "weatherInfoIndex"]:
                 smallreturndict.pop(key, None)
 
             hour = smallreturndict.pop("hour")
